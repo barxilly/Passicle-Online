@@ -82,7 +82,7 @@
             // Custom Encryption Function
             function encrypt(key, data) {
                 // lowercase the data and key
-                data = data.toLowerCase();
+                data = data.toLowerCase().replace(' ', '');
                 key = key.toLowerCase().replace(' ', '');
                 var result = "";
                 const acceptable = "]ezdESiKJGPIX(*@m374=+Z6faRN\"2&y^9VqY8A1B`%hs.v}#L0pQD:o;C-x,!ul)bHU{wW/tF'r~Ong?c[_MjT$k5";
