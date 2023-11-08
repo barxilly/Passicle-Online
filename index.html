@@ -165,6 +165,8 @@
                     document.body.appendChild(textarea);
                     // Select the textarea
                     textarea.select();
+                    // Replace &amp; with &
+                    textarea.value = textarea.value.replace(/&amp;/g, "&");
                     // Copy the textarea
                     document.execCommand("copy");
                     // Remove the textarea
