@@ -18,10 +18,12 @@
             #title {
                 font-family: 'Segoe UI Black', 'segoe-ui-black-regular';
                 font-size: 2.25em;
+                user-select: none;
 
             }
             #description {
                 font-size: 1.25em;
+                user-select: none;
             }
             #pageContent {
                 width: 100%;
@@ -74,6 +76,9 @@
         </div>
         <script>
             var title = document.getElementById("title");
+            title.onclick = function() {
+
+            }
             var description = document.getElementById("description");
             var service = document.getElementById("service");
             var key = document.getElementById("key");
@@ -92,9 +97,9 @@
                 // The result should be longer than the data if done correctly
                 for (var i = 0; i < data.length; i++) {
                     // Get the character
-                    var c = data.charAt(i);
+                    var currentChar = data.charAt(i);
                     // Get the index of the character
-                    var index = acceptable.indexOf(c);
+                    var index = acceptable.indexOf(currentChar);
                     // Get the character at the index of the key
                     var k = key.charAt(index % key.length);
                     // Get the index of the key character
